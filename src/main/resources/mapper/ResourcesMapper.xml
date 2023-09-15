@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mymonitorbackend.mapper.ResourcesMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.mymonitorbackend.domain.Resources">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="recordTimestamp" column="record_timestamp" jdbcType="TIMESTAMP"/>
+            <result property="cpufreq" column="CPUFreq" jdbcType="OTHER"/>
+            <result property="download" column="downLoad" jdbcType="DECIMAL"/>
+            <result property="upload" column="upLoad" jdbcType="DECIMAL"/>
+            <result property="fps" column="FPS" jdbcType="DECIMAL"/>
+            <result property="cpuusage" column="CPUUsage" jdbcType="DECIMAL"/>
+            <result property="latitude" column="Latitude" jdbcType="DECIMAL"/>
+            <result property="longitude" column="Longitude" jdbcType="DECIMAL"/>
+            <result property="memoryusage" column="MemoryUsage" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,record_timestamp,CPUFreq,
+        downLoad,upLoad,FPS,
+        CPUUsage,Latitude,Longitude,
+        MemoryUsage
+    </sql>
+</mapper>

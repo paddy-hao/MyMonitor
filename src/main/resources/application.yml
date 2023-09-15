@@ -1,0 +1,12 @@
+spring:
+  thymeleaf:
+    enabled: true
+    prefix:
+      classpath: /templates
+      cache: false
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/MyMonitor
+    username: root
+    password:
