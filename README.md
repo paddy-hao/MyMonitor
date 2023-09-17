@@ -1,5 +1,5 @@
 # MyMonitor
-MyMonitorBackend服务端主要在TestController里面提供接口来接收客户端发送的数据，并存储在数据库。在application.yml里数据库配置需要更改。
+MyMonitorBackend服务端主要在TestController里面提供接口来接收客户端发送的数据，并存储在数据库。使用WebSocket与安卓客户端进行通信，但是存在一些问题，无法使用。在application.yml里数据库配置需要更改。
 
 数据库表：CREATE TABLE `Resources` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -18,7 +18,8 @@ MyMonitorBackend服务端主要在TestController里面提供接口来接收客�
 MyMonitor是安卓客户端使用androidstudio可以部署在模拟器或者手机上，手机需要打开开发者模式，使用数据线连接。
 - 在SendResourceDataTask类中需要将服务端的IP地址进行更改。
 
-MyMonitor2是Linux客户端，使用springboot开发的项目，内嵌了tomcat服务器，在MoniotrController里提供了访问接口
+MyMonitor2是Linux客户端，使用springboot开发的项目，内嵌了tomcat服务器，在MoniotrController里提供了访问接口，可以访问获取动态资源，和存储在text文件里的静态资源。
+
 - 在docker中进行测试 ：
   docker rm -f my_monitor_container 
   docker rmi -f my_monitor
