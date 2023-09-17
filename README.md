@@ -21,13 +21,18 @@ MyMonitor是安卓客户端使用androidstudio可以部署在模拟器或者手�
 MyMonitor2是Linux客户端，使用springboot开发的项目，内嵌了tomcat服务器，在MoniotrController里提供了访问接口，可以访问获取动态资源，和存储在text文件里的静态资源。
 
 - 在docker中进行测试 ：
-  docker rm -f my_monitor_container 
+  docker rm -f my_monitor_container
+  
   docker rmi -f my_monitor
+  
   mvn clean install
+  
   docker build -t my_monitor .
+  
   docker run -d -p 8080:8080 --name my_monitor_container my_monitor
 
 使用如下docker
+
 -<img width="705" alt="Screen Shot 2023-09-17 at 2 02 44 PM" src="https://github.com/paddy-hao/MyMonitor/assets/67146392/b2f72d7f-f321-4f4f-b9c9-e9a0403b6da7">
 
 MyMonitorIOS是IOS客户端使用Xcode部署在模拟器上，在UnifiedMonitor中需要修改发送函数里的服务端IP地址
