@@ -1,5 +1,6 @@
 # MyMonitor
 MyMonitorBackend服务端主要在TestController里面提供接口来接收客户端发送的数据，并存储在数据库。在application.yml里数据库配置需要更改。
+
 数据库表：CREATE TABLE `Resources` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `record_timestamp` varchar(255) NOT NULL DEFAULT '',
@@ -24,5 +25,8 @@ MyMonitor2是Linux客户端，使用springboot开发的项目，内嵌了tomcat�
   mvn clean install
   docker build -t my_monitor .
   docker run -d -p 8080:8080 --name my_monitor_container my_monitor
+
 使用如下docker
 -<img width="705" alt="Screen Shot 2023-09-17 at 2 02 44 PM" src="https://github.com/paddy-hao/MyMonitor/assets/67146392/b2f72d7f-f321-4f4f-b9c9-e9a0403b6da7">
+
+MyMonitorIOS是IOS客户端使用Xcode部署在模拟器上，在UnifiedMonitor中需要修改发送函数里的服务端IP地址
